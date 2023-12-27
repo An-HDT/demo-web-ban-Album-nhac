@@ -1,0 +1,251 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: 0px;
+}
+
+/* header chính  */
+#main{
+    height: 7000px;
+ 
+}
+/* đăng nhập và đăng kí */
+
+/* header phụ */
+
+/* -----content --------------*/
+    /* qc css------------ */
+    .qc{
+        width: 100%;
+        height: 7%;
+        padding-top: 3%;
+    }
+        .qc .img-qc{
+            position: relative;
+            left: 8%;
+            width: 84%;
+            height: 100%;
+            background-size:contain;
+            background-repeat:repeat-x;
+            background-color: rgb(211, 46, 46);
+            background-position-x: center;
+        }
+    .imgoffic{
+        position: relative;
+        height: 100%;
+        width: 100%;        
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+
+        
+
+    }
+
+/* ///////////////////////////////////////////000 */
+
+
+
+/* ///////////////////////////////////////////// */
+    .buynow a:hover{
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: 2px solid rgba(0, 0, 0, 0.5);
+    }
+
+
+
+
+/* nút mua buuy now */
+    .buynow{
+        width: 93px;
+        margin: auto;
+    }
+
+
+    .buynow a{
+        font-family: Programme, Arial, sans-serif;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: x-small;
+        text-align: center;
+        color: black;
+        text-decoration: none;
+        border: 2px solid white;
+        padding: 9px 20px 9px 20px;
+        position: absolute;
+        top: 88%;
+    }
+
+
+
+
+
+/* danh sách bán đĩa */
+        .list-art{
+            margin-top: 3%;
+            width: 100%;
+            height: 6%;
+        }
+            .nameart{
+                height: auto;
+                width: 100%;
+            }
+            .nameart div{
+                height: auto;
+                width: 84%;
+                /* text-align: center; */
+                font-family: "Noto Sans","AdihausDIN","Helvetica",Arial,sans-serif;
+                text-transform: uppercase;
+                font-size: 30   px;
+                margin-bottom: 1%;
+                position: relative;
+                left: 8%;
+            }
+            .list-art div{
+                display: block;
+
+            }
+            .img-art div{
+                display: inline-flex;
+
+            }
+                .img-art{
+                    width: 100%;
+                    height: 74%;
+                
+                }
+                .posart, .posname{
+                    width: 84%;
+                    height: 100%;
+                    position: relative;
+                    left: 8%;
+                }
+
+                .art{
+                    width: 24.25%;
+                    height: 100%;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+                /* giá sp */
+
+                .cost{
+                    float:inline-end;
+                    width: 13%;
+                    height: 5%;
+                    text-align: center;
+                    background-color: white;
+                    color: black;
+                    font-family: "Noto Sans","AdihausDIN","Helvetica",Arial,sans-serif;
+
+                    font-weight: 100;
+                    font-size: small;
+                    position: relative;
+                    top: 95%;
+                    padding-left: 2%;
+                }
+
+                /*  */
+
+
+                /* tên art */
+                .in4art div{
+                    display: inline-flex;
+                }
+                .name{
+                    /* text-align: center; */
+                    font-family: "Noto Sans","AdihausDIN","Helvetica",Arial,sans-serif;
+                    text-transform: uppercase;
+                    width: 25%;
+                    height: auto;
+                    font-weight: bolder;
+                    font-size: 16px;
+                    padding-top: 6px;
+                    text-decoration: none;
+                    color: black;
+                }
+
+
+/*  */
+.ad-qc{
+    width: 100%;
+    height: 214px;
+    background-image: url(/img_ls/41719623.jpg);
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: contain;
+    
+    position: relative;
+}
+.ad-qc-img{
+    position: relative;
+    /* background-color: yellow; */
+    width: 70%;
+    height: 76%;
+    left: 15%;
+    top: 12%;
+}
+/* sale nè mấy condy lon */
+.sale{
+    position: relative;
+    top: 15%;
+    left: 15%;
+    width: max-content;
+    height: max-content;
+}
+.sale a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    width: auto;
+    height: auto;
+}
+.buy1buy1{
+    font-size: 15px;
+}
+.saleoff{
+    font-size: 50px;
+    text-transform: uppercase;
+}
+/* đăng kí thành thành viên chính thức để nhận ưu đãi nè */
+.ad-qc-img .sale, .click-to{
+    display: inline-flexbox;
+}
+.click-to{
+    position: relative;
+    width:max-content;
+    height:max-content;
+    left: 63%;
+    bottom: 30%;
+    border: 1px solid white;
+}
+.intoclick{
+    position: relative;
+    right: 3px;
+    bottom: 3px;
+    background-color: white;
+    height: 59px;
+    width: 255px;
+}
+.intoclick a{
+    padding-left: 15px;
+    line-height: 59px;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.intoclick i{
+    line-height: 59px;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 15px;
+}
+
+

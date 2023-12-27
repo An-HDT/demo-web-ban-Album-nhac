@@ -1,0 +1,78 @@
+#main{
+
+}
+.quangcao{
+    width: 100%;
+    height: 350px;
+    background-image: url(/trangchu/img-background/41719623.jpg);
+    background-repeat: inherit;
+    background-size: contain;
+    background-position-x: center;
+
+
+}
+.quangcao div{
+    display: inline-block;
+}
+.qcleft{
+    width: 100%;
+    height: 100%;
+}
+
+.qcleft div{
+    display: block;
+}
+
+
+.pr{
+    width: auto;
+    color: white;
+    font-size: 23px;
+    text-transform: uppercase;
+    font-family: "Noto Sans","AdihausDIN","Helvetica",Arial,sans-serif;
+    width: 50%;
+}
+.pr p{
+    font-size: 15px;
+    
+}
+
+.buynow2{
+    /* width: 30%;
+    position: relative;
+    top: 40%;
+    left: 10%; */
+}
+.buynow2 a:hover{
+    background-color: white;
+    color: black;
+}
+.buynow2 a{
+    background-color: black;
+    font-family: "Noto Sans","AdihausDIN","Helvetica",Arial,sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: x-small;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 9px 20px 9px 20px;
+
+}
+.pralbum{
+    position: relative;
+    left: 60%;
+    width: 20%;
+    height: 87%;
+    background-image: url(/img_ls/eminem.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    top: -15%;
+}
+
+
+/* check ne */
+
+

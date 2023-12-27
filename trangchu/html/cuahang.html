@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cửa hàng</title>
+    <link rel="stylesheet" href="/trangchu/css/css.css">
+    <link rel="stylesheet" href="/trangchu/css/biaalbum-copy.css">
+    <!-- <link rel="stylesheet" href="/trangchu/file_css/quangcaoinside.css"> -->
+    <link rel="stylesheet" href="/trangchu/icone/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="/trangchu/file_css/trangchu.css">
+
+    <link rel="stylesheet" href="/trangchu/css/testtimkiem.css">
+    <link rel="stylesheet" href="/trangchu/css/footer.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            color: white;
+        }
+        
+        .col {
+            background-clip: content-box;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+        
+        #getinput {
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            cursor: pointer;
+        }
+        
+        #getinput:hover {
+            transform: scale(1.19);
+            transition: all 0.1s;
+        }
+        
+        .price::after {
+            content: "$";
+        }
+        
+        #ToAdmin {
+            display: none;
+        }
+        
+        #signout {
+            display: none;
+        }
+        
+        #min,
+        #max {
+            margin-left: 10px;
+            border: 0px;
+            background-color: unset;
+            color: white;
+            border-bottom: 1px solid rgb(255, 255, 255);
+        }
+        
+        #search_gia {
+            margin-left: 10px;
+            cursor: pointer;
+            text-align: center;
+            line-height: 20px;
+            width: 20px;
+            height: 20px;
+        }
+        
+        #khoanggia h5 {
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body onload="uploadpage();def()">
+    <div id="main">
+        <div class="header">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-6 m-6 c-12">
+                        <h2>AnhEmTaoBanDia</h2>
+                    </div>
+                    <div class="col l-6 m-6 c-12">
+                        <div>
+                            <p id="css_header" class="ti-align-justify" onclick="newheader()"></p>
+                            <a class="linkintro linkheader" href="/trangchu/html/trangchu.html" id="homepage">Trang chủ</a>
+                            <a class="linkintro linkheader" href="/trangchu/html/cuahang.html" id="shop" onclick="newcuahangreload()">Cửa hàng</a>
+                            <a class="linkintro linkheader" href="/trangchu/Admin/aaaa/admin1.html" id="admin">Admin</a>
+                            <a class="linkintro linkheader" id="user">user</a>
+                            <a class="linkintro linkheader" href="/trangchu/html/hoadon.html" id="bill"> Hóa Đơn </a>
+                            <a class="linkintro linkheader" href="/trangchu/html/dangnhap.html" id="signin">Đăng Nhập</a>
+                            <a class="linkintro linkheader" href="/trangchu/html/dangki.html" id="signup">Đăng kí</a>
+                            <a class="linkintro linkheader" href="/trangchu/html/trangchu.html" id="signout" onclick="signout()">Đăng xuất</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <input type="text" id="myInput" placeholder="Tìm album..." title="Type in a name">
+        <button id="getinput" onclick="search()"><i class="ti-search" style="color:white;"></i></button>
+
+        <div class="category">
+            <div class="list">
+                <ul>
+                    <a class="a_list" style="cursor:pointer ;" id="cd" onclick="locall(this)">CD</a>
+                    <a class="a_list" style="cursor:pointer ;" id="cassette" onclick="locall(this)">Cassette</a>
+                    <a class="a_list" style="cursor:pointer ;" id="lower5" onclick="pricard(5)">Dưới 5$</a>
+                    <a class="a_list" style="cursor:pointer ;" id="lower9" onclick="pricard(9)">Dưới 9$</a>
+                    <a class="a_list" style="cursor:pointer ;" id="lower12" onclick="pricard(12)">Dưới 12$</a>
+                    <a class="a_list" style="cursor:pointer ;" id="lower20" onclick="pricard(20)">Dưới 20$</a>
+                </ul>
+            </div>
+        </div>
+        <div class="grid wide">
+            <div class="row">
+                <div class="col l-4 m-4 c-12 l-o-4 m-o-4">
+                    <div id="khoanggia">
+                        <form action="" id="timkhoang">
+                            <h5> Từ </h5> <input type="text" id="min">
+                            <h5> Đến </h5><input type="text" id="max"> <i class="ti-search" id="search_gia" onclick="search_theogia()"></i>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="search_id">
+            <div class="grid wide">
+                <div class="topsale">
+                    <h2 id="title_sale">Top billboard hot 100</h2>
+                </div>
+                <div class="row">
+                    <div class="col l-3 m-6 c-6 cd main_album">
+                        <div class="album" onclick="check(this)">
+                            <img class="background" src="/trangchu/Album/Kendrick_Lamar/Good_Kid,M.A.A.D_City/Good_Kid,M.A.A.D_City.png" alt="">
+                            <li><a href="/trangchu/html/chitiet.html" class="name_album">Good Kid, M.A.A.D City - Kendrick
+                  Lamar</a>
+                                <a href="/trangchu/html/chitiet.html" class="price">5</a>
+                                <a href="/trangchu/html/chitiet.html" class="load_new">CD</a>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-6 main_album">
+                        <div class="album" onclick="check(this)">
+                            <img class="background" src="/trangchu/Album/J.Cole/4_Your_Eyez_Only/4_Your_Eyez_Only.png" alt="">
+                            <li>
+                                <a href="/trangchu/html/chitiet.html" class="name_album">4 Your Eyez Only - J Cole</a>
+                                <a href="/trangchu/html/chitiet.html" class="price">7.5</a>
+                                <a href="/trangchu/html/chitiet.html" class="load_new">CD</a>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-6 Catesll main_album">
+                        <div class="album" onclick="check(this)">
+                            <img class="background" src="/trangchu/Album/NF/Perception/Perception.jpg" alt="">
+                            <li>
+                                <a href="/trangchu/html/chitiet.html" class="name_album">Perception - NF</a>
+                                <a href="/trangchu/html/chitiet.html" class="price">12.35</a>
+                                <a href="/trangchu/html/chitiet.html" class="load_new">Cassette</a>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-6 cd main_album">
+                        <div class="album" onclick="check(this)">
+                            <img class="background" src="/trangchu/Album/Eminem/The_Eminem_Show/The_Eminem_Show.png" alt="">
+                            <li>
+                                <a href="/trangchu/html/chitiet.html" class="name_album">The Eminem Show - Eminem</a>
+                                <a href="/trangchu/html/chitiet.html" class="price">12.52</a>
+                                <a href="/trangchu/html/chitiet.html" style="color: rgb(184, 184, 184);" class="load_new">CD</a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <!-- hang 2 -->
+                <div class="row">
+                    <div class="col l-3 m-6 cd c-6 Catesll main_album">
+                        <div class="album cd" onclick="check(this)">
+                            <img class="background" src="/trangchu/Album/XXXTentacion/(XXXTentacion album)/(XXXTentacion album).png" alt="">
+                            <a href="/trangchu/html/chitiet.html" class="name_album">? - XXXTentacion</a>
+                            <a href="/trangchu/html/chitiet.html" class="price">16.8</a>
+                            <a href="/trangchu/html/chitiet.html" style="color: rgb(184, 184, 184);" class="load_new">CD</a>
+
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 cd c-6 main_album">
+                        <div class="album cd" onclick="check(this)">
+                            <img class="background" src="/trangchu/Album/N.W.A/Straight_Outta_Compton/Straight_Outta_Compton.jpg" alt="">
+                            <a href="/trangchu/html/chitiet.html" class="name_album">Straight Outta Compton - NWA</a>
+                            <a href="/trangchu/html/chitiet.html" class="price">3.8</a>
+                            <a href="/trangchu/html/chitiet.html" style="color: rgb(184, 184, 184);" class="load_new">CD</a>
+
+                        </div>
+                    </div>
+                    <div class="col l-3 cd m-6 Catesll c-6 main_album">
+                        <div class="album catesll" onclick="check(this)">
+                            <img class="background" src="/trangchu/Album/Nas/illmatic/illmatic.png" alt="">
+                            <a href="/trangchu/html/chitiet.html" class="name_album">illmatic - Nas</a>
+                            <a href="/trangchu/html/chitiet.html" class="price">11.2</a>
+                            <a href="/trangchu/html/chitiet.html" style="color: rgb(184, 184, 184);" class="load_new">CD</a>
+
+                        </div>
+                    </div>
+                    <div class="col l-3  m-6 c-6 Catesll main_album">
+                        <div class="album " onclick="check(this)">
+                            <img class="background" src="/trangchu/Album/Drake/Nothing_Was_The_Same/Nothing_Was_The_Same.png" alt="">
+                            <a href="/trangchu/html/chitiet.html" class="name_album">Nothing Was The Same - Drake</a>
+                            <a href="/trangchu/html/chitiet.html" class="price">12.3</a>
+                            <a href="/trangchu/html/chitiet.html" style="color: rgb(184, 184, 184);" class="load_new">Cassette</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="topsale">
+                    <h2>Top bán chạy tháng 6</h2>
+                </div>
+                <!-- hàng 3 -->
+                <div class="row">
+                    <div class="col l-3 cd m-6 c-6 main_album">
+                        <div class="album " onclick="check(this)">
+                            <img class="background" src="/trangchu/Album/XXXTentacion/(XXXTentacion album)/(XXXTentacion album).png" alt="">
+                            <a href="/trangchu/html/chitiet.html" class="name_album">? - XXXTentacion</a>
+                            <a href="/trangchu/html/chitiet.html" class="price">7.3</a>
+                            <a href="/trangchu/html/chitiet.html" style="color: rgb(184, 184, 184);" class="load_new">CD</a>
+
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 cd c-6 main_album">
+                        <div class="album" onclick="check(this)">
+                            <img class="background" src="/trangchu/Album/Dr.Dre/2001/2001.png" alt="">
+                            <a href="/trangchu/html/chitiet.html" class="name_album">2001 - Dr.Dre</a>
+                            <a href="/trangchu/html/chitiet.html" class="price">6.2</a>
+                            <a href="/trangchu/html/chitiet.html" style="color: rgb(184, 184, 184);" class="load_new">Cassette</a>
+
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-6 Catesll main_album">
+                        <div class="album" onclick="check(this)">
+                            <img class="background" src="/trangchu/Album/Dr.Dre/Compton/Compton.png" alt="">
+                            <a href="/trangchu/html/chitiet.html" class="name_album">Compton - Dr.Dre</a>
+                            <a href="/trangchu/html/chitiet.html" class="price">12.5</a>
+                            <a href="/trangchu/html/chitiet.html" style="color: rgb(184, 184, 184);" class="load_new">CD</a>
+
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-6 cd main_album">
+                        <div class="album " onclick="check(this)">
+                            <img class="background" src="/trangchu/Album/ICD/we_want_icd.jpg" alt="">
+                            <a href="/trangchu/html/chitiet.html" class="name_album">We Want ICD - ICD</a>
+                            <a href="/trangchu/html/chitiet.html" class="price">11.3</a>
+                            <a href="/trangchu/html/chitiet.html" style="color: rgb(184, 184, 184);" class="load_new">CD</a>
+
+                        </div>
+                    </div>
+                </div>
+                <!--hàng 4  -->
+                <div class="row">
+                    <div class="col l-3 m-6 c-6 cd main_album">
+                        <div class="album" onclick="check(this)">
+                            <img class="background" src="/trangchu/Album/Dr.Dre/The_Chronic/The_Chronic.png" alt="">
+                            <a href="/trangchu/html/chitiet.html" class="name_album">The Chronic - Dr.Dre</a>
+                            <a href="/trangchu/html/chitiet.html" class="price">8.2</a>
+                            <a href="/trangchu/html/chitiet.html" style="color: rgb(184, 184, 184);" class="load_new">Cassette</a>
+
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-6 Catesll main_album">
+                        <div class="album" onclick="check(this)">
+                            <img class="background" src="/trangchu/Album/Drake/Certified_Lover_Boy/Certified_Lover_Boy.png" alt="">
+                            <a href="/trangchu/html/chitiet.html" class="name_album">Certified Lover Boy - Drake</a>
+                            <a href="/trangchu/html/chitiet.html" class="price">15.3</a>
+                            <a href="/trangchu/html/chitiet.html" style="color: rgb(184, 184, 184);" class="load_new">CD</a>
+
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-6 Catesll main_album">
+                        <div class="album" onclick="check(this)">
+                            <img class="background" src="/trangchu/Album/Eminem/Music_to_Be_Murdered_By/Music_to_Be_Murdered_By.png" alt="">
+                            <a href="/trangchu/html/chitiet.html" class="name_album">Music to Be Murdered By - Eminem</a>
+                            <a href="/trangchu/html/chitiet.html" class="price">9.3</a>
+                            <a href="/trangchu/html/chitiet.html" style="color: rgb(184, 184, 184);" class="load_new">Cassette</a>
+
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-6 main_album">
+                        <div class="album" onclick="check(this)">
+                            <img class="background" src="/trangchu/Album/Kendrick_Lamar/To_Pimp_a_Butterfly/To_Pimp_a_Butterfly.png" alt="">
+                            <a href="/trangchu/html/chitiet.html" class="name_album">To Pimp A Butterfly - Kendrick Lamar</a>
+                            <a href="/trangchu/html/chitiet.html" class="price">11.25</a>
+                            <a href="/trangchu/html/chitiet.html" style="color: rgb(184, 184, 184);" class="load_new">CD</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col l-3 m-6 c-6 cd main_album">
+                        <div class="album" onclick="check(this)">
+                            <img class="background" src="/trangchu/Album/Eminem/Encore/Encore.png" alt="">
+                            <a href="/trangchu/html/chitiet.html" class="name_album">Encore - Eminem</a>
+                            <a href="/trangchu/html/chitiet.html" class="price">8.2</a>
+                            <a href="/trangchu/html/chitiet.html" style="color: rgb(184, 184, 184);" class="load_new">CD</a>
+
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-6 cd Catesll main_album">
+                        <div class="album" onclick="check(this)">
+                            <img class="background" src="/trangchu/Album/NF/The_Search/The_Search.png" alt="">
+                            <a href="/trangchu/html/chitiet.html" class="name_album">The Search - NF</a>
+                            <a href="/trangchu/html/chitiet.html" class="price">15.3</a>
+                            <a href="/trangchu/html/chitiet.html" style="color: rgb(184, 184, 184);" class="load_new">Cassette</a>
+
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-6 cd Catesll main_album">
+                        <div class="album" onclick="check(this)">
+                            <img class="background" src="/trangchu/Album/Eminem/Revival/Revival.png" alt="">
+                            <a href="/trangchu/html/chitiet.html" class="name_album">Revival - Eminem</a>
+                            <a href="/trangchu/html/chitiet.html" class="price">9.3</a>
+                            <a href="/trangchu/html/chitiet.html" style="color: rgb(184, 184, 184);" class="load_new">CD</a>
+
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-6 main_album cd">
+                        <div class="album" onclick="check(this)">
+                            <img class="background" src="/trangchu/Album/NF/Clouds/Clouds.png" alt="">
+                            <a href="/trangchu/html/chitiet.html" class="name_album">Clouds - NF</a>
+                            <a href="/trangchu/html/chitiet.html" class="price">11.25</a>
+                            <a href="/trangchu/html/chitiet.html" style="color: rgb(184, 184, 184);" class="load_new">CD</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col l-3 m-6 c-6 cd main_album">
+                        <div class="album" onclick="check(this)">
+                            <img class="background" src="/trangchu/Album/XXXTentacion/Bad_Vibes_Forever/Bad_Vibes_Forever.png" alt="">
+                            <a href="/trangchu/html/chitiet.html" class="name_album">Bad Vibes Forever - XXXTentacion</a>
+                            <a href="/trangchu/html/chitiet.html" class="price">8.2</a>
+                            <a href="/trangchu/html/chitiet.html" style="color: rgb(184, 184, 184);" class="load_new">Cassette</a>
+
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-6 Catesll main_album">
+                        <div class="album" onclick="check(this)">
+                            <img class="background" src="/trangchu/Album/Eminem/Kamikaze/Kamikaze.png" alt="">
+                            <a href="/trangchu/html/chitiet.html" class="name_album">Kamikaze - Eminem</a>
+                            <a href="/trangchu/html/chitiet.html" class="price">15.3</a>
+                            <a href="/trangchu/html/chitiet.html" style="color: rgb(184, 184, 184);" class="load_new">CD</a>
+
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-6 Catesll main_album">
+                        <div class="album" onclick="check(this)">
+                            <img class="background" src="/trangchu/Album/Eminem/Music_to_Be_Murdered_By/Music_to_Be_Murdered_By.png" alt="">
+                            <a href="/trangchu/html/chitiet.html" class="name_album">Music to Be Murdered By - Eminem</a>
+                            <a href="/trangchu/html/chitiet.html" class="price">9.3</a>
+                            <a href="/trangchu/html/chitiet.html" style="color: rgb(184, 184, 184);" class="load_new">CD</a>
+
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-6 main_album">
+                        <div class="album" onclick="check(this)">
+                            <img class="background" src="/trangchu/Album/Kendrick_Lamar/To_Pimp_a_Butterfly/To_Pimp_a_Butterfly.png" alt="">
+                            <a href="/trangchu/html/chitiet.html" class="name_album">To Pimp A Butterfly - Kendrick Lamar</a>
+                            <a href="/trangchu/html/chitiet.html" class="price">11.25</a>
+                            <a href="/trangchu/html/chitiet.html" style="color: rgb(184, 184, 184);" class="load_new">Cassette</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="row1">
+
+                </div>
+
+                <div class="topsale">
+                    <h2>Top billboard hot 100</h2>
+                </div>
+
+            </div>
+            <div class="grid wide" style="max-width: 100%;">
+                <!-- quảng cáo album-->
+                <div class="check">
+                    <div class="row" style="width: 100%;">
+                        <div class="col l-6 m-6 c-12" style="text-align: unset;">
+                            <div class="buy1get2">
+                                <h2>buy 3 get 1</h2>
+                                <p>Mua 3 album sẽ có cơ hội nhận 1 vé KOTD</p>
+                                <div class="buynow2"><a href="www.facebook.com">buy now</a></div>
+
+                            </div>
+                        </div>
+                        <div class="col l-6 m-6 c-12">
+                            <div class="img-sale"><img src="/trangchu/Album/Eminem/Kamikaze/Kamikaze.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer" style="color:white ;">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-4 m-12 c-12">
+                        <div class="row">
+                            <div class="col l-6 m-6 c-12">
+                                <h2>Coder bởi</h2>
+                                <h5>Anh em tao</h5>
+                                <h5>Laptop của LS</h5>
+                                <h5>Laptop của Hiuj</h5>
+                                <h5>Laptop của thằng Khứa an</h5>
+                                <h5>cả tấn nữa</h5>
+                            </div>
+                            <div class="col l-6 m-6 c-12">
+                                <h2>TuYển DụNg nÈ</h2>
+                                <h5>Nhảy popping trên bàn giám đốc</h5>
+                                <h5>Ngồi đánh cờ tướng với LS</h5>
+                                <h5>Rep tin nhắn của khách nam còn khách nữ là của LS</h5>
+                                <h5>bẢo vỆ ngÒi Đốt tHuốC cAnh xE</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-12 c-12">
+                        <h1>Anhemtaobandia</h1>
+                        <h4>KhongcOgMaildAuHihI012bA@gmail.com</h4>
+                    </div>
+                    <div class="col l-4 m-12 c-12">
+                        <div class="row">
+                            <div class="col l-6 m-6 c-12">
+                                <h2>Mấy cái điều khoản</h2>
+                                <h5>làm nhân viên bán đĩa nè</h5>
+                                <h5>síp bơ dao kéo à nhầm, dao đĩa nè</h5>
+                                <h5>da hạn hợp đồng</h5>
+                                <h5>thêm mấy cái điều em hay nói</h5>
+                                <h5>điều quan trọng là anh nhớ em</h5>
+                            </div>
+                            <div class="col l-6 m-6 c-12">
+                                <h2>in tư cho mấy bạn nữ xinh nè</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lastfooter">
+                    <h2>Bản quyền thuộc về công ty vô trách nhiệm hữu hạn Một mình tao</h2>
+                    <h2>@CoPy là tao chém từng thằng</h2>
+                </div>
+            </div>
+        </div>
+        <div id="sign"><i class=""></i></div>
+    </div>
+</body>
+
+
+<script src="/trangchu/js/cuahang.js"></script>
+<script src="/trangchu/js/menubar.js"></script>
+<script src="/trangchu/Admin/aaaa/admin.js"></script>
+
+
+</html>

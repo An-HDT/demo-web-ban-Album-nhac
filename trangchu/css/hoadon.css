@@ -1,0 +1,49 @@
+#history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 498px;
+    overflow-y: scroll;
+}
+
+#history .history-item {
+    width: 1020px;
+    height:fit-content;
+    background-color: rgb(101, 101, 101);
+    margin-top: 8px;
+    border-radius: 4px;
+}
+
+h4 {
+    margin-left: 10px !important;
+}
+
+#history img{
+    width: 80px;
+}
+
+#history table {
+    padding-top: 10px;
+}
+
+#history .bottom {
+    height: 40px;
+    float:right;
+    padding-right: 10px;
+}
+
+#history table thead {
+    padding-bottom: 5px;
+}
+
+#history table td:nth-child(1),
+#history table td:nth-child(2),
+#history table td:nth-child(3),
+#history table td:nth-child(4),
+#history table td:nth-child(5){
+    width: 200px;
+}
+
+#history table td{
+    text-align: center;
+}

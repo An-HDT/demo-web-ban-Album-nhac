@@ -1,0 +1,43 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: 0px;
+}
+#main{
+    height: 7000px;
+}
+
+.footer div{
+    display: inline-flex;
+
+}
+.footer{
+    width: 100%;
+    height: 150px;
+    background-color: yellow;
+}
+
+.ftpr{
+    background-color: black;
+    width: 50%;
+}
+
+.ftlogin{
+    background-color: blue;
+    height: auto;
+    width: auto;
+}
+.ftlogin a{
+    background-color: black;
+    font-family: "Noto Sans","AdihausDIN","Helvetica",Arial,sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: x-small;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 9px 20px 9px 20px;
+    letter-spacing: 3px;
+    word-spacing: 6px;
+}

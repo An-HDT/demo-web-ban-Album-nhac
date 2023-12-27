@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/trangchu/file_css/trangchu.css">
+  <link rel="stylesheet" href="/trangchu/css/thuvienccss.css">
+  <link rel="stylesheet" href="/trangchu/icone/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="/trangchu/file_css/search.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="/trangchu/css/footer.css"><!-- footer -->
+  <title>trang chủ</title>
+  <style>
+    .buynow {
+      color: black;
+    }
+
+    .buynowout:hover {
+      background-color: #191919;
+      border: 3px solid white;
+      color: white;
+    }
+
+    /* #ToAdmin{
+      display: none;
+    } */
+    /* #signin{
+      display: inline;
+    }
+    #signup{
+      display: inline;
+    } */
+    /* #signout{
+      display: none;
+    } */
+
+    
+  </style>
+
+</head>
+
+<body>
+  <div id="main">
+
+    <!-- header xiu khua an code -->
+    <div class="header">
+      <div class="grid wide">
+        <div class="row">
+          <div class="col l-6 m-6 c-12">
+            <h2>AnhEmTaoBanDia</h2>
+          </div>
+          <div class="col l-6 m-6 c-12">
+            <div>
+              <p id="css_header" class="ti-align-justify" onclick="newheader()"></p>
+              <a class="linkintro linkheader" href="/trangchu/html/trangchu.html" id="homepage">Trang chủ</a>
+              <a class="linkintro linkheader" href="/trangchu/html/cuahang.html" id="shop" onclick="newcuahangreload()">Cửa hàng</a>
+              <a class="linkintro linkheader" href="/trangchu/Admin/aaaa/admin1.html" id="admin" >Admin</a>
+              <a class="linkintro linkheader" id="user">user</a>
+              <a class="linkintro linkheader" href="/trangchu/html/hoadon.html" id="bill"> Hóa Đơn </a>
+              <a class="linkintro linkheader" href="/trangchu/html/dangnhap.html" id="signin">Đăng Nhập</a>
+              <a class="linkintro linkheader" href="/trangchu/html/dangki.html" id="signup" >Đăng kí</a>
+              <a class="linkintro linkheader" href="/trangchu/html/trangchu.html" id="signout"  onclick="signout()">Đăng xuất</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Header">
+      <!--copy full-->
+      <section class="Search-bar">
+        <form action="/trangchu/html/cuahang.html" method="get">
+          <input type="text" class="search-item" id="search-item" onclick="search_for_store()">
+          <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+        </form>
+      </section>
+    </div>
+    <div class="img-intro">
+      <div class="imgbackground">
+        <img src="/trangchu/img-background/img-background.jpg" alt="">
+      </div>
+      <div class="formusic">
+        <h3>Yang Mike Cùng My Gang </h3>
+        <p>Anh em tao bán đĩa là nơi phân phối, chọn lọc chi tiết, không kĩ càng, tùy hứng. Chúng tôi luôn cố gắng đem
+          đến những chiếc đĩa mà do chúng tôi nhập về tới tay bạn, những chiếc đĩa chứa những track nhạc chất vcl. Ngoài
+          chất lượng chúng tôi cũng đi kèm đó là giá cả cực kì cháy túi. Chúng tôi hi vọng bạn sẽ có nhiều phút giây
+          chill nhạc bên người homie của mình và gia đình dù là ngoài vỉa hè hay trong căn phòng nhỏ của các bạn.</p>
+      </div>
+      <div class="link-intro">
+        <div class="grid wide">
+          <div class="row" style="text-align:center ;">
+            <!--phần này thẻ a chưa được căn giữa chính xác, độ chính xác chỉ gần đúng và code chỉ có tính chất chắp vá (ở mọi kích thước màn hình)-->
+            <div class="col l-2 m-4 c-12"><a href="/trangchu/html/cuahang.html" class="linkintro a1"
+                onclick="loadpage(this)">File Mp4</a></div>
+            <div class="col l-2 m-4 c-12"><a href="/trangchu/html/cuahang.html" class="linkintro a2"
+                onclick="loadpage(this)">Album</a></div>
+            <div class="col l-2 m-4 c-12"><a href="/trangchu/html/cuahang.html" class="linkintro a3"
+                onclick="loadpage(this)">Đĩa Than</a></div>
+            <div class="col l-2 m-4 c-12"><a href="/trangchu/html/cuahang.html" class="linkintro a4"
+                onclick="loadpage(this)">Cassette</a></div>
+            <div class="col l-2 m-4 c-12"><a href="/trangchu/html/cuahang.html" class="linkintro a5"
+                onclick="loadpage(this)">CD</a> </div>
+            <div class="col l-2 m-4 c-12"><a href="/trangchu/html/cuahang.html" class="linkintro a6"
+                onclick="loadpage(this)">Mp3</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- top bạch kim nè -->
+    <div class="imgintro">
+      <div class="formusic next">
+        <h3>Top album chứng nhận bạch kim</h3>
+        <p>THÍCH KÊU ĐẮT K :) ??????</p>
+      </div>
+    </div>
+    <!-- get know to us phần có con ghệ đang lắc dick nè -->
+    <div class="getknow">
+      <div class="imggetknow"><img src="/trangchu/img-background/getknowtous.png" alt=""></div>
+      <div class="formusic getknowtitle">
+        <h4 style="color: black;">ĐẶNG TÙ TÙ LÀ </h4>
+        <p style="color: black;">Get to know anhemtaobandia, a top Online Record Store launched in 2000. Our company was
+          founded by Jon Doe thanks to a fundamental love and passion for music. As the music industry embraces mp3s and
+          a more digital strategy, anhemtaobandia is proving to be a force to be reckoned with. Whatever sort of music
+          you need, we’ve got you covered. Call us today to learn more about us.
+        </p>
+      </div>
+    </div>
+    <div class="saler2" style="padding-bottom: 50px;">
+      <div class="grid wide">
+        <div class="row">
+          <div class="col l-6 m-6 c-12">
+            <div class="saleoff">
+              <h2>Sale Off 60%</h2>
+              <h3>Mua 2 Không Tặng 1</h3>
+              <div class="buynowout"><a href="/trangchu/html/cuahang.html">
+                  <div class="buynow">Buy now</div>
+                </a></div>
+            </div>
+          </div>
+          <div class="col l-6 m-6 c-12">
+            <img class="saleimg"
+              src="/trangchu/Album/Kendrick_Lamar/Mr. Morale_& _The_Big_Steppers/Mr. Morale_& _The_Big_Steppers.png"
+              alt="">
+            <div class="buynowout buynowoutmobile"><a href="https://www.facebook.com/khongphaiLeson">
+                <div class="buynow">Buy now</div>
+              </a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="getknow getk2">
+      <div class="grid wide">
+        <div class="row">
+          <div class="col l-6 m-6 c-12">
+            <h2 class="salehoivien" style="color:black ;">Đăng kí tài khoản để không nhận được nhiều ưu đãi từ chúng
+              tôi</h2>
+          </div>
+          <div class="col l-6 m-6 c-12">
+            <div class="boderdk">
+              <div class="dk"><a href="/trangchu/html/dangki.html">Đăng Kí Luôn Ko ???<i class="ti-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer" style="color:white ;">
+      <div class="grid wide">
+        <div class="row">
+          <div class="col l-4 m-12 c-12">
+            <div class="row">
+              <div class="col l-6 m-6 c-12">
+                <h2>Coder bởi</h2>
+                <h5>Anh em tao</h5>
+                <h5>Laptop của LS</h5>
+                <h5>Laptop của Hiuj</h5>
+                <h5>Laptop của thằng Khứa an</h5>
+                <h5>cả tấn nữa</h5>
+              </div>
+              <div class="col l-6 m-6 c-12">
+                <h2>TuYển DụNg nÈ</h2>
+                <h5>Nhảy popping trên bàn giám đốc</h5>
+                <h5>Ngồi đánh cờ tướng với LS</h5>
+                <h5>Rep tin nhắn của khách nam còn khách nữ là của LS</h5>
+                <h5>bẢo vỆ ngÒi Đốt tHuốC cAnh xE</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col l-4 m-12 c-12">
+            <h1>Anhemtaobandia</h1>
+            <h5>KhongcOgMaildAuHihI012bA@gmail.com</h5>
+          </div>
+          <div class="col l-4 m-12 c-12">
+            <div class="row">
+              <div class="col l-6 m-6 c-12">
+                <h2>Mấy cái điều khoản</h2>
+                <h5>làm nhân viên bán đĩa nè</h5>
+                <h5>síp bơ dao kéo à nhầm, dao đĩa nè</h5>
+                <h5>da hạn hợp đồng</h5>
+                <h5>thêm mấy cái điều em hay nói</h5>
+                <h5>điều quan trọng là anh nhớ em</h5>
+              </div>
+              <div class="col l-6 m-6 c-12">
+                <h2>in tư của bọn tao</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lastfooter">
+          <h2>Bản quyền thuộc về công ty vô trách nhiệm hữu hạn Một mình tao</h2>
+          <h2>@CoPy là tao chém từng thằng</h2>
+        </div>
+      </div>
+    </div>
+    <!-- phần này sẽ sư dụng cho admin tức khi add acc của admin mới được hiển thị lên trên web -->
+  </div> <!-- thẻ main-->
+  <script>
+    var demso;
+    demso = 0;
+    window.localStorage.setItem('dem', demso);
+    function newheadertrangchu() {
+      var getdemso;
+      getdemso = window.localStorage.getItem('dem');
+      if (getdemso % 2 === 0) {
+        var unsetelement = document.getElementsByClassName("linkintro");
+        for (i = 0; i < unsetelement.length; i++) {
+          changeheader = unsetelement[i].style.display = "block";
+          console.log(changeheader);
+        }
+      }
+      else {
+        var unsetelement = document.getElementsByClassName("linkintro");
+        for (i = 0; i < unsetelement.length; i++) {
+          changeheader = unsetelement[i].style.display = "";
+          console.log(changeheader);
+        }
+      }
+      getdemso++;
+      window.localStorage.setItem('dem', getdemso);
+    }
+  </script>
+  <script src="/trangchu/js/menubar.js"></script>
+  <script src="/trangchu/js/cuahang.js"></script>
+</body>
+
+</html>

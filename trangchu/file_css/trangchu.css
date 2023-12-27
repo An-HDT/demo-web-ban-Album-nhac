@@ -1,0 +1,937 @@
+* {
+    font-family: "Noto Sans", "AdihausDIN", "Helvetica", Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+#main {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+}
+
+@media (min-width:100px) and (max-width: 739.9px) {
+    #show{
+        display: none;
+        text-decoration: none;
+
+        position: relative;
+        width: 100%;
+        text-align: center;
+        color: white;
+
+    }
+    #show-block{
+        display: block;
+        text-decoration: none;
+
+        position: relative;
+        width: 100%;
+        text-align: center;
+        color: white;
+    }
+    #unshow{
+        display: none;
+    }
+    #min, #max{
+        width: 30px;
+    }
+    #timkhoang{
+        display: flex;
+        justify-content: center;
+    }
+
+    #css_header {
+        cursor: pointer;
+        text-align: center;
+        font-size: 2.3rem;
+        color: white;
+    }
+
+    .a_list {
+        display: none;
+        text-align: center;
+        margin-top: 12px;
+    }
+
+    .a_list:hover {
+        text-decoration: underline;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+    }
+
+    /* intro đầu web trang chủ */
+    .imgbackground img {
+        width: calc(198px * 1.50830);
+        height: 60%;
+        position: relative;
+        left: calc((100% - (198px * 1.50830))/2);
+    }
+
+    .formusic p {
+        height: auto;
+        width: 80%;
+        text-align: center;
+        position: relative;
+        left: calc((100% - 80%) / 2);
+        font-weight: 400;
+        padding-bottom: 15px;
+        font-size: 15px;
+        word-spacing: 3px;
+    }
+
+    .link-intro {
+        padding-bottom: 70px;
+    }
+
+    .linkintro {
+        text-decoration: none;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin-top: 1.3rem;
+        margin-bottom: 1.3rem;
+        color: white;
+
+    }
+    .linkheader{
+        display: none;
+    }
+
+    .linkintro:hover {
+        text-decoration: underline;
+    }
+
+    /* .a1 {
+        margin-left: 45%;
+    }
+
+    .a2 {
+        margin-left: 42%;
+    }
+
+    .a3 {
+        margin-left: 40%;
+    }
+
+    .a4 {
+        margin-left: 40.5%;
+    }
+
+    .a5 {
+        margin-left: 42%;
+    }
+
+    .a6 {
+        margin-left: 45%;
+    } */
+
+    .col {
+        padding-top: 15px;
+    }
+
+    /* get know to us nè  */
+    .formusic h4 {
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-weight: 400;
+        font-size: 25px;
+    }
+
+    .getknow {
+        padding-bottom: 20px;
+    }
+
+    /* sale ne */
+    .buynowout {
+        display: none;
+    }
+
+    .saleoff h3,
+    .saleoff h2 {
+        text-align: center;
+    }
+
+    .saleoff h2 {
+        font-weight: 400;
+        padding-top: 10px;
+        padding-bottom: 5px;
+    }
+
+    .saleoff h3 {
+        font-weight: 400;
+        padding-bottom: 5px;
+    }
+
+    .saleimg {
+        width: 68%;
+        height: auto;
+        margin-left: calc((100% - 68%) / 2);
+    }
+
+    .buynowoutmobile {
+        display: block;
+        margin-left: calc((100% - 163px) /2);
+        margin-top: 9px;
+    }
+
+}
+
+@media (min-width:740px) and (max-width: 1023px) {  /* vẫn lỗi font chữ header*/
+    * {
+        box-sizing: border-box;
+    }
+    #show{
+        display: inline;
+        text-decoration: none;
+        font-size: 11px;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        color: white;
+
+    }
+    #show-block{
+        display: inline;
+        text-decoration: none;
+        font-size: 11px;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        color: white;
+
+    }
+    #unshow{
+        display: none;
+    }
+    #min, #max{
+        width: 95px;
+    }
+    #timkhoang{
+        display: flex;
+        justify-content: center;
+    }
+
+
+    #myInput {
+        background-image: url('/css/searchicon.png');
+        background-position: 10px 12px;
+        background-repeat: no-repeat;
+        width: 50%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+        margin-left: 25%;
+        border-radius: 15px;
+        background-color: #272727;
+        border: none;
+        color: white;
+    }
+
+    #myUL {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #myUL li a {
+        border: 1px solid #ddd;
+        margin-top: -1px;
+        /* Prevent double borders */
+        background-color: #f6f6f6;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: block
+    }
+
+    #myUL li a:hover:not(.header) {
+        background-color: #eee;
+    }
+
+
+    /* css cho mặt hàng */
+
+
+    .category {
+        width: 68%;
+
+        margin-left: 15%;
+    }
+
+    .list a {
+        text-decoration: none;
+        font-size: 1.05rem;
+        line-height: 50px;
+        color: white;
+        border-radius: 20px;
+        margin-left: 7px;
+    }
+    .list ul{
+        width:fit-content;
+        position: relative;
+        left: calc((100% - 404.54px)/2);
+    }
+
+    .list a:hover {
+        text-decoration: underline;
+        background-color: black;
+    }
+
+    #css_header {
+        display: none;
+    }
+
+    .img-intro {
+        background-color: rgb(37, 37, 37);
+        padding-top: 30px;
+    }
+
+    .imgbackground img {
+        width: calc(320px * 1.50830);
+        height: 60%;
+        position: relative;
+        left: calc((100% - (320px * 1.50830))/2);
+    }
+
+    .formusic h4 {
+        width: auto;
+        height: auto;
+        text-align: center;
+        padding: 15px;
+        font-weight: 400;
+    }
+
+    .formusic p {
+        height: auto;
+        width: 69%;
+        text-align: center;
+        position: relative;
+        left: calc((100% - 69%) / 2);
+        font-weight: 400;
+        padding-bottom: 12px;
+    }
+
+    .link-intro {
+        padding-bottom: 70px;
+    }
+
+    .linkintro {
+        text-decoration: none;
+        margin-left: 7px;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size:  14px;
+    }
+
+    .linkintro:hover {
+        text-decoration: underline;
+    }
+
+    .col {
+        padding-top: 15px;
+    }
+
+    /* get know to us nè */
+    .formusic h4 {
+        font-size: 30px;
+    }
+
+    .getknow {
+        padding-bottom: 20px;
+    }
+
+    /* sale ne */
+    .saleoff h3 {
+        margin-left: 13%;
+    }
+
+    .saleoff h2 {
+        margin-left: 13%;
+    }
+
+    .buynowout {
+        margin-left: 13%;
+    }
+
+    .saleoff h2 {
+        font-weight: 400;
+        padding-top: 30px;
+        padding-bottom: 25px;
+    }
+
+    .saleoff h3 {
+        font-weight: 400;
+        padding-bottom: 25px;
+    }
+
+    .saleimg {
+        width: 55%;
+        height: auto;
+        margin-left: 23%;
+        margin-top: 21px;
+    }
+
+    .buynowoutmobile {
+        display: none;
+    }
+    #linkheader{
+        display: none;
+    }
+
+
+}
+
+@media (min-width:1024px) and (max-width: 1239px) {
+    * {
+        box-sizing: border-box;
+    }
+    #show{
+        display: inline;
+        text-decoration: none;
+        margin-left: 20px;
+        position: relative;
+
+        text-align: center;
+        color: white;
+    }
+    #show-block{
+        display: inline;
+        text-decoration: none;
+        margin-left: 5px;
+        position: relative;
+        text-align: center;
+        color: white;
+
+    }
+    #unshow{
+        display: none;
+    }
+    #min, #max{
+        width: 120px;
+    }
+    #timkhoang{
+        display: flex;
+        justify-content: center;
+    }
+
+    .header{
+        padding-top: 25px;
+    }
+    #myInput {
+        background-image: url('/css/searchicon.png');
+        background-position: 10px 12px;
+        background-repeat: no-repeat;
+        width: 50%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+        margin-left: 25%;
+        border-radius: 15px;
+        background-color: #272727;
+        border: none;
+        color: white;
+    }
+
+    #myUL {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #myUL li a {
+        border: 1px solid #ddd;
+        margin-top: -1px;
+        /* Prevent double borders */
+        background-color: #f6f6f6;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: block
+    }
+
+    #myUL li a:hover:not(.header) {
+        background-color: #eee;
+    }
+
+
+    /* css cho mặt hàng */
+
+
+    .category {
+        width: 68%;
+
+        margin-left: 15%;
+    }
+    .list ul{
+        width: fit-content;
+        position: relative;
+        left: calc((100% - 630.33px)/2);
+    }
+
+    .list a {
+        text-decoration: none;
+        font-size: 0.84rem;
+        padding: 0.15rem 1.75rem 0.15rem 1.75rem;
+        line-height: 50px;
+        color: white;
+        background-color: #272727;
+        border-radius: 20px;
+
+    }
+
+    .list a:hover {
+        text-decoration: underline;
+        background-color: black;
+    }
+
+    #css_header {
+        display: none;
+    }
+
+    .img-intro {
+        background-color: rgb(37, 37, 37);
+        padding-top: 30px;
+    }
+
+    .imgbackground img {
+        width: calc(320px * 1.50830);
+        height: 60%;
+        position: relative;
+        left: calc((100% - (320px * 1.50830))/2);
+    }
+
+    .formusic h4 {
+        width: auto;
+        height: auto;
+        text-align: center;
+        padding: 15px;
+        font-weight: 400;
+    }
+
+    .formusic p {
+        height: auto;
+        width: 69%;
+        text-align: center;
+        position: relative;
+        left: calc((100% - 69%) / 2);
+        font-weight: 400;
+        padding-bottom: 50px;
+    }
+
+    .link-intro {
+        padding-bottom: 70px;
+    }
+
+    .linkintro {
+        text-decoration: none;
+        margin-left: 20px;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 14px;
+    }
+
+    .linkintro:hover {
+        text-decoration: underline;
+    }
+
+    /* get know to us nè */
+    .formusic h4 {
+        font-size: 30px;
+    }
+
+    .getknow {
+        padding-bottom: 20px;
+    }
+
+
+    /* sale nè */
+    .saleoff h2 {
+        font-size: 40px;
+        /* code lại 768*/
+        margin-left: 20%;
+        /* code lại*/
+        font-weight: 400;
+        margin-top: 15%;
+    }
+
+    .saleoff h3 {
+        font-weight: 400;
+        font-size: 20px;
+        padding-bottom: 22px;
+        margin-left: 20%;
+        padding-top: 9px;
+
+    }
+
+    .buynowout {
+        margin-left: 20%;
+    }
+
+    .saleimg {
+        width: 55%;
+        height: auto;
+        margin-left: 23%;
+        margin-top: 28px;
+    }
+
+    .buynowoutmobile {
+        display: none;
+    }
+
+    /* getknow dang ki */
+    .getk2 {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .salehoivien {
+        font-size: 19px;
+
+    }
+
+}
+
+@media (min-width: 1240px) and (max-width: 2000px) {
+    * {
+        box-sizing: border-box;
+    }
+    #show{
+        display: inline;
+        text-decoration: none;
+
+        position: relative;
+        width: 100%;
+        text-align: center;
+        color: white;
+    }
+    #show-block{
+        display: inline;
+        text-decoration: none;
+
+        position: relative;
+        width: 100%;
+        text-align: center;
+        color: white;
+    }
+    #unshow{
+        display: none;
+    }
+    #timkhoang{
+        display: flex;
+        justify-content: center;
+    }
+    #min, #max{
+        width: 120px;
+    }
+
+    #myInput {
+        background-image: url('/css/searchicon.png');
+        background-position: 10px 12px;
+        background-repeat: no-repeat;
+        width: 50%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+        margin-left: 25%;
+        border-radius: 15px;
+        background-color: #272727;
+        border: none;
+        color: white;
+    }
+
+    #myUL {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #myUL li a {
+        border: 1px solid #ddd;
+        margin-top: -1px;
+        /* Prevent double borders */
+        background-color: #f6f6f6;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: block
+    }
+
+    #myUL li a:hover:not(.header) {
+        background-color: #eee;
+    }
+
+
+    /* css cho mặt hàng */
+
+
+    .category {
+        width: 68%;
+
+        margin-left: 15%;
+    }
+    .list ul{
+        width: fit-content;
+        position: relative;
+        left: calc((100% - 788.54px )/2);
+    }
+
+    .list a {
+        text-decoration: none;
+
+        font-size: 1.05rem;
+        padding: 0.35rem 1.75rem 0.35rem 1.75rem;
+        line-height: 50px;
+        color: white;
+        background-color: #272727;
+        border-radius: 20px;
+        margin-left: 15px;
+    }
+
+    .list a:hover {
+        text-decoration: underline;
+        background-color: black;
+    }
+
+    #css_header {
+        display: none;
+    }
+
+    .header {
+        padding-top: 35px;
+        padding-bottom: 15px;
+    }
+
+    .img-intro {
+        background-color: rgb(37, 37, 37);
+        padding-top: 30px;
+    }
+
+    .imgbackground img {
+        width: calc(320px * 1.50830);
+        height: 60%;
+        position: relative;
+        left: calc((100% - (320px * 1.50830))/2);
+    }
+
+    .formusic h4 {
+        width: auto;
+        height: auto;
+        text-align: center;
+        padding: 15px;
+        font-weight: 400;
+    }
+
+    .formusic p {
+        height: auto;
+        width: 69%;
+        text-align: center;
+        position: relative;
+        left: calc((100% - 69%) / 2);
+        font-weight: 400;
+        padding-bottom: 50px;
+    }
+
+    .link-intro {
+        padding-bottom: 70px;
+    }
+
+    .linkintro {
+        text-decoration: none;
+
+        position: relative;
+        width: 100%;
+        text-align: center;
+        color: white;
+    }
+
+    .linkintro:hover {
+        text-decoration: underline;
+    }
+
+
+    /* getknow */
+    .getknow {
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+
+    .getknowtitle h4 {
+        padding-top: 65px;
+        font-size: 40px;
+    }
+
+    /* sale nè */
+    .saleoff h2 {
+        font-weight: 400;
+        font-size: 55px;
+        /* code lại 768*/
+        padding-top: 30px;
+        padding-bottom: 25px;
+        margin-top: 13%;
+        /* code lại*/
+    }
+
+    .saleoff h3 {
+        font-weight: 400;
+        font-size: 35px;
+        padding-bottom: 25px;
+    }
+
+    .saleoff h3,
+    .saleoff h2,
+    .buynowout {
+        margin-left: 20%;
+    }
+
+    .saleimg {
+        width: 55%;
+        height: auto;
+        margin-left: 23%;
+        margin-top: 28px;
+    }
+
+    .buynowoutmobile {
+        display: none;
+    }
+
+    /* getknowdang ki */
+    .salehoivien {
+        font-size: 23px;
+
+    }
+
+    .next h3 {
+        font-size: 50px;
+        margin-bottom: 50px;
+    }
+
+    .linkintro {
+        margin-left: 15px;
+    }
+
+
+}
+
+
+
+
+/* phần code chung (khi chỉnh sửa code chung dưới đây sẽ ảnh hưởng toàn bộ tới css trong các kích thước trên) */
+/* header */
+.header h2 {
+    color: white;
+    font-weight: 400;
+    position: relative;
+    top: -8px;
+}
+
+
+
+/* ảnh intro (img-intro) */
+.img-intro {
+    background-color: #191919;
+    padding-top: 30px;
+    color: white;
+}
+
+.formusic h3 {
+    width: auto;
+    height: auto;
+    text-align: center;
+    padding: 15px;
+    font-weight: 400;
+}
+
+.getknow {
+    background-color: #E1EFF2;
+}
+
+.imggetknow img {
+    margin-top: 15px;
+    width: 200px;
+    position: relative;
+    left: calc((100% - (200px))/2);
+    clip-path: circle(50%);
+}
+
+.buynowout {
+    width: 160px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    border: 3px solid #607980;
+}
+
+.buynowout a {
+    text-decoration: none;
+    color: #000;
+}
+
+.buynow a:hover {
+    color: white;
+}
+
+.buynow {
+    text-align: center;
+    padding: 12px 10px 12px 10px;
+}
+
+.buynowout:hover {
+    background-color: #191919;
+    border: 3px solid white;
+    color: white;
+}
+
+.saler2 {
+    color: white;
+}
+
+.salehoivien {
+    width: 70%;
+    margin-left: 15%;
+    font-weight: 400;
+
+}
+
+.boderdk {
+    position: relative;
+    left: calc((100% - 237px) / 2);
+    width: 237px;
+    height: 64px;
+    border: 2px solid black;
+    
+}
+
+.dk {
+    text-align: center;
+    background-color: black;
+    position: relative;
+    left: -5px;
+    top: -5px;
+}
+
+.dk a {
+    color: white;
+    text-decoration: none;
+    line-height: 64px;
+    font-size: 17px;
+}
+
+.formusic {
+    color: white;
+}
+
+
+.linkintro:hover{
+    text-decoration:underline;
+}

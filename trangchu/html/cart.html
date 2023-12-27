@@ -1,0 +1,282 @@
+
+<!-- đã css xong -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/trangchu/css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="/trangchu/js/cart.js"></script>
+    <link rel="stylesheet" href="/trangchu/css/css.css">
+    
+    <link rel="stylesheet" href="/trangchu/file_css/quangcaoinside.css">
+    <link rel="stylesheet" href="/trangchu/icone/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="/trangchu/file_css/trangchu.css">
+
+    <link rel="stylesheet" href="/trangchu/css/testtimkiem.css">
+    <link rel="stylesheet" href="/trangchu/css/footer.css">
+    <title> Cart </title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .col {
+            background-clip: content-box;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+
+        #getinput {
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            cursor: pointer;
+
+        }
+
+        #getinput:hover {
+            transform: scale(1.19);
+            transition: all 0.1s;
+        }
+
+        #img {
+            height: 438px;
+
+        }
+
+        #img img {
+            height: 100%;
+            position: relative;
+            left: 20%;
+        }
+
+        #inform h2,
+        #inform p,
+        h4 {
+            margin-left: 15%;
+            padding-top: 15px;
+        }
+
+        .buy_button {
+            position: relative;
+            left: 15%;
+            width: 150px;
+            height: 50px;
+            margin-top: 78px;
+            cursor: pointer;
+
+        }
+        #payfor{
+            background-image: url(/trangchu/img-background/background_pay.png);
+            background-position: center;
+            background-size: cover;
+            height: 500px;
+        }
+        
+        .form_pay{
+            display:inline-grid;
+            position: relative;
+            left: 30%;
+            width: 40%;
+            margin-top: 82px;
+            height: 70px;
+        }
+        .css_for_Pay{
+            margin-top: 18px;
+            height: 35px;
+            background-color: unset;
+            color: white;
+            border: 0px;
+            border-bottom: 3px solid white;
+            outline: none;
+        }
+        #pay{
+            margin-top: 38px;
+            height: 37px;
+            
+        }
+        #soluong{
+            
+            margin-left: 10px;
+            margin-right: 10px;
+            text-align: center;
+            font-weight: 400;
+            line-height: 33.4px;
+        }
+        .mua{
+            margin-top: 23px;
+        }
+        .mua h3{
+            margin-right: calc((607.67px/2) - 80.14px - 33.4px - 10px);
+            line-height: 33.4px;
+        }
+        .bu_pay{
+            cursor: pointer;;
+            height: 33.4px;
+            width: 33.4px;
+        }
+        #pricd::after{
+            content: "$";
+        }  
+        #ToAdmin{
+      display: none;
+    }
+    #signin{
+      display: inline;
+    }
+    #signup{
+      display: inline;
+    }
+    #signout{
+      display: none;
+    }
+
+    </style>
+</head>
+<body>
+    <script>   //link???
+        // getData()
+        // savetoLocal()
+    </script> 
+    <div id="main">
+    <div class="header">
+        <div class="grid wide">
+            <div class="row">
+                <div class="col l-6 m-6 c-12">
+                    <h2>AnhEmTaoBanDia</h2>
+                </div>
+                <div class="col l-6 m-6 c-12">
+                    <p id="css_header" class="ti-align-justify" onclick="newheader()"></p>
+                    <a class="linkintro linkheader" href="/trangchu/html/trangchu.html" id="homepage">Trang chủ</a>
+                    <a class="linkintro linkheader" href="/trangchu/html/cuahang.html" id="shop" onclick="newcuahangreload()">Cửa hàng</a>
+                    <a class="linkintro linkheader" href="/trangchu/Admin/aaaa/admin1.html" id="admin" >Admin</a>
+                    <a class="linkintro linkheader" id="user">user</a>
+                    <a class="linkintro linkheader" href="/trangchu/html/hoadon.html" id="bill"> Hóa Đơn </a>
+                    <a class="linkintro linkheader" href="/trangchu/html/dangnhap.html" id="signin">Đăng Nhập</a>
+                    <a class="linkintro linkheader" href="/trangchu/html/dangki.html" id="signup" >Đăng kí</a>
+                    <a class="linkintro linkheader" href="/trangchu/html/trangchu.html" id="signout"  onclick="signout()">Đăng xuất</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="text" id="myInput" placeholder="Tìm album..." title="Type in a name">
+    <button id="getinput" onclick="search()"><i class="ti-search" style="color:white;"></i></button>
+    <div class="cart">
+        <div class="title"> 
+            <div class="title_container">
+                <h2> Giỏ hàng của tôi </h2>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <table width="100%" id="cartItems" class="cart-items">
+                <thead>
+                    <tr>
+                        <td> Remove </td>
+                        <td> Image </td>
+                        <td> Product </td>
+                        <td> Price </td>
+                        <td> Quantity </td>
+                        <td> Total </td>
+                    </tr>
+                </thead>
+
+                <tbody id="cart-body">
+                    <!-- <tr>
+                        <td> Remove </td>
+                        <td> <img src="https://picsum.photos/200/300" alt="test"/> </td>
+                        <td> Product </td>
+                        <td> Price </td>
+                        <td> Quantity </td>
+                        <td> Total </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+        <hr style="margin-top: 30px;">
+    </div>
+
+    <div class="receipt_container">
+        <div class="receipt">
+            <!-- <h4> CART TOTAL </h4>
+            <div>
+                <h5>Subtotal</h5>
+                <p>$215.00</p>
+            </div>
+            <div>
+                <h5>Shipping</h5>
+                <p>$215.00</p>
+            </div>
+            <hr>
+            <div>
+                <h5>Total</h5>
+                <p>$215.00</p>
+            </div>
+            <button> THANH TOÁN </button> -->
+        </div>
+    </div>
+    <div class="footer" style="color:white ;">
+        <div class="grid wide">
+            <div class="row">
+                <div class="col l-4 m-12 c-12">
+                    <div class="row">
+                        <div class="col l-6 m-6 c-12">
+                            <h2>Coder bởi</h2>
+                            <h5>Anh em tao</h5>
+                            <h5>Laptop của LS</h5>
+                            <h5>Laptop của Hiuj</h5>
+                            <h5>Laptop của thằng Khứa an</h5>
+                            <h5>cả tấn nữa</h5>
+                        </div>
+                        <div class="col l-6 m-6 c-12">
+                            <h2>TuYển DụNg nÈ</h2>
+                            <h5>Nhảy popping trên bàn giám đốc</h5>
+                            <h5>Ngồi đánh cờ tướng với LS</h5>
+                            <h5>Rep tin nhắn của khách nam còn khách nữ là của LS</h5>
+                            <h5>bẢo vỆ ngÒi Đốt tHuốC cAnh xE</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l-4 m-12 c-12">
+                    <h1>Anhemtaobandia</h1>
+                    <h4>KhongcOgMaildAuHihI012bA@gmail.com</h4>
+                </div>
+                <div class="col l-4 m-12 c-12">
+                    <div class="row">
+                        <div class="col l-6 m-6 c-12">
+                            <h2>Mấy cái điều khoản</h2>
+                            <h5>làm nhân viên bán đĩa nè</h5>
+                            <h5>síp bơ dao kéo à nhầm, dao đĩa nè</h5>
+                            <h5>da hạn hợp đồng</h5>
+                            <h5>thêm mấy cái điều em hay nói</h5>
+                            <h5>điều quan trọng là anh nhớ em</h5>
+                        </div>
+                        <div class="col l-6 m-6 c-12">
+                            <h2>in tư cho mấy bạn nữ xinh nè</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lastfooter">
+                <h2>Bản quyền thuộc về công ty vô trách nhiệm hữu hạn Một mình tao</h2>
+                <h2>@CoPy là tao chém từng thằng</h2>
+            </div>
+        </div>
+    </div>
+    <div id="sign"><i class=""></i></div>
+</div>
+<script>
+    showDataToCart()
+</script>
+<script src="/trangchu/js/cuahang.js">
+
+</script>
+<script src="/trangchu/js/menubar.js"></script>
+</body>
+
+</html>

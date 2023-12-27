@@ -1,0 +1,206 @@
+body {
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+.cart {
+    width: 100%;
+    height: 600px;
+    background-color: black;
+}
+
+.title {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    top: 0px;
+}
+
+.title_container {
+    top: 60%;
+    background-color: black;
+    left: 2%;
+}
+
+.title_container h2 {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding-top: 60px;
+    padding-left: 2%;
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+
+hr {
+    border: none;
+    height: 1px;
+    background: #696969;
+    width: 98%;
+    margin-right: 0;
+    
+}
+
+i {
+    color: rgb(224, 0, 0);
+}
+
+.container {
+    width: 96%;
+    margin-left: 2% ;
+    height: 400px;
+    overflow-y: scroll;
+    margin-top: 30px;
+    border: 2px solid rgb(123, 123, 123);
+    overflow-x: scroll;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+.container table {
+    position: relative;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.container table thead{
+    font-weight: 700;
+    position: sticky;
+    top: 0;
+}
+
+.container table thead tr {
+    height: 40px;
+}
+
+.container table thead td {
+    background: rgb(123, 123, 123);
+    border: none;
+}
+
+.container table img {
+    padding: 0;
+    margin: 0;
+}
+
+input {
+    width: 25%;
+    padding-left: 1px;
+}
+
+.container table td {
+    border: 1px solid #b6b3b3;
+    text-align: center;
+    border-left: none;
+}
+
+.container table td:nth-child(1) {
+    width: 100px;
+}
+
+.container table td:nth-child(2),
+.container table td:nth-child(3){
+    width: 200px;
+}
+
+.container table td:nth-child(4),
+.container table td:nth-child(5),
+.container table td:nth-child(6){
+    width: 170px;
+}
+
+.container table tbody img {
+    width: 100px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.receipt_container {
+    width: 100%;
+    height: 400px;
+    margin: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.container table tbody tr button{
+    width: 100%;
+    height: 120px;
+    background-color: black;
+}
+
+.container table tbody tr button:hover{
+    cursor: pointer;
+}
+
+.container table tbody tr i{
+    font-size: 40px;
+}
+
+.container table tbody tr td:last-child {
+    border-right: none;
+}
+
+
+.receipt {
+    position: absolute;
+    width: 40%;
+    height: 270px;
+    border: 2px solid rgb(123, 123, 123);
+    margin-top: 50px;
+    
+}
+
+.receipt div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.receipt h4 {
+    margin: 0;
+    background: rgb(123, 123, 123);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-weight: 700;
+}
+
+.receipt h5 {
+    padding-left: 12px;
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+
+.receipt p {
+    padding-right: 12px;
+    text-align: center;
+    margin-top: 22px;
+}
+
+.receipt button {
+    width: 100%;
+    height: 36.6px;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(123, 123, 123);
+    border: none;
+    color: white;
+    bottom: 0px;
+}
+
+.receipt button:hover {
+    cursor: pointer;
+}
+
+.receipt button:active {
+    background-color: #696969;
+}
+
+

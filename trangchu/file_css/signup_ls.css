@@ -1,0 +1,93 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: 0px;
+}
+html{
+    font-family: Programme, Arial, sans-serif;
+}
+#main{
+    width: 100%;
+    height: 500px;
+}
+
+.dang-nhap{
+    width: 30%;
+    height: 70%;
+    position: absolute;
+    left: 35%;
+    top: 15%;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+}
+
+.dang-nhap div{
+    display: flexbox;
+}
+.logo{
+    width: auto;
+    height: 100px;
+    /* background-color: aqua; */
+}
+.dangnhap{
+    padding: 25px;
+}
+.dangnhap h3{
+    text-align: center;
+    text-transform: uppercase;
+}
+.tkandmk{
+    width: 100%;
+    height: 50px;
+    background-color: blueviolet;
+    
+}
+/* logo đăng nhập  */
+
+.logo img{
+    width: 10%;
+    height: auto;
+    position: absolute;
+    left: 45%;
+    top: 5%;
+}
+
+/* enter login nè  */
+
+.enterlogin{
+    width: 25%;
+    height: 30px;
+    background-color: #1c77ff;
+    position:relative;
+    left: 37.5%;
+    margin-top: 25px;
+    text-align: center;
+    border: 0.5px solid #1c77ff;
+    border-radius: 5px;
+}
+.enterlogin ul a{
+    text-decoration: none;
+    line-height: 30px;
+    color: white;
+}
+
+/* ----------------- */
+/* quên mật khẩu? */
+.quenmk{
+    padding-top: 10px;
+}
+
+.quenmk ul a{
+    text-decoration: none;
+    padding-left: 45px;
+    font-size: small;
+    font-weight: 500;
+    color: blue;
+    letter-spacing: 0.25px;
+}
+
+.quenmk .bfname::before{
+    content:"Chưa có tài khoản hả?";
+    color: rgba(0, 0, 0, 0.75);
+    margin-right: 25px;
+}

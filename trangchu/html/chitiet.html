@@ -1,0 +1,170 @@
+
+<!-- css đã xong còn nút chốt đơn cần liên kết với hóa đơn để in ra bill mua lẻ, mua đơn
+fix phần nút tìm kiếm -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+    <link rel="stylesheet" href="/trangchu/css/css.css">
+    <link rel="stylesheet" href="/trangchu/css/biaalbum-copy.css">
+    <link rel="stylesheet" href="/trangchu/icone/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="/trangchu/file_css/trangchu.css">
+  <link rel="stylesheet" href="/trangchu/file_css/chitiet.css">
+    <link rel="stylesheet" href="/trangchu/css/testtimkiem.css">
+    <link rel="stylesheet" href="/trangchu/css/footer.css">
+
+    <style>
+
+    #ToAdmin{
+      display: none;
+    }
+    #signin{
+      display: inline;
+    }
+    #signup{
+      display: inline;
+    }
+    #signout{
+      display: none;
+    }
+
+    </style>
+</head>
+
+<body onload="change_function()">
+    <div id="main">
+        <div class="header">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-6 m-6 c-12">
+                        <h2>AnhEmTaoBanDia</h2>
+                    </div>
+                    <div class="col l-6 m-6 c-12">
+                        <div >
+                            <p id="css_header" class="ti-align-justify" onclick="newheader()"></p>
+                            <a class="linkintro linkheader" href="/trangchu/html/trangchu.html" id="homepage">Trang chủ</a>
+                            <a class="linkintro linkheader" href="/trangchu/html/cuahang.html" id="shop" onclick="newcuahangreload()">Cửa hàng</a>
+                            <a class="linkintro linkheader" href="/trangchu/Admin/aaaa/admin1.html" id="admin" >Admin</a>
+                            <a class="linkintro linkheader" id="user">user</a>
+                            <a class="linkintro linkheader" href="/trangchu/html/hoadon.html" id="bill"> Hóa Đơn </a>
+                            <a class="linkintro linkheader" href="/trangchu/html/dangnhap.html" id="signin">Đăng Nhập</a>
+                            <a class="linkintro linkheader" href="/trangchu/html/dangki.html" id="signup" >Đăng kí</a>
+                            <a class="linkintro linkheader" href="/trangchu/html/trangchu.html" id="signout"  onclick="signout()">Đăng xuất</a>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/trangchu/js/cuahang.js"></script>
+        <script src="/trangchu/js/cart.js"></script>
+        <script src="/trangchu/js/menubar.js"></script>
+        <!-- <input type="text" id="myInput" placeholder="Tìm album..." title="Type in a name">
+        <button id="getinput" onclick="search()"><i class="ti-search" style="color:white;"></i></button> -->
+        <div id="inform" class="grid wide" style="margin-top: 60px; color:white;">
+            <div class="row">
+                <div class="col l-6 m-6 c-12">
+                    <div id="img">
+                        <img id="change_id"
+                            src="/trangchu/Album/Kendrick_Lamar/Mr. Morale_& _The_Big_Steppers/Mr. Morale_& _The_Big_Steppers.png"
+                            alt="">
+                    </div>
+                </div>
+                <div id="left" class="col l-6 m-6 c-12">
+                    <h2 id="name">check thong tin cac thu</h2>
+                    <h2 id="type">check cd</h2>
+                    <h4 id="pricd">4$</h4>
+                    <p id="more">Shop sẽ không đổi trả album đã bóc seal, mọi vấn đề khi mở album đều phải có video quay
+                        lại và gửi lại cho shop, nếu không mọi vấn đề chúng tôi k rảnh để giải quyết</p>
+                    <button class="buy_button" onclick="paynow()">Mua Ngay</button>
+                    <button class="buy_button" onclick="tocart()">Tới giỏ hàng</button>
+                    <button class="buy_button" onclick="addproductToCart()" >Thêm vào giỏ hàng</button>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="payfor" style="display:none ;">
+            <div class="form_pay">
+                <input type="text" placeholder="Tên người nhận" class="css_for_Pay" id="name_user">
+                <input type="text" placeholder="Nhập địa chỉ nhà cho người ta ship đi má" class="css_for_Pay" id="local">
+                <input type="text" placeholder="Ghi số điện thoại ở đây nè ba" class="css_for_Pay" name="cho xin số cái" id="phone_number">
+                <div class="mua"  style="display:flex ;">
+                    <h3 style="color:white ;">mấy cái :</h3>
+                    <button class="bu_pay" onclick="cong()">+</button>
+                         <h4 id="soluong" style="color:white ; padding-top: 0px;">1</h4>
+                     <button class="bu_pay" onclick="tru()">-</button>
+                </div>
+                <button id="pay" onclick="joke_down()">Chốt đơn luôn </button>
+            </div>
+            
+            <!-- <div class="amout">
+                <button>+</button>
+                <h5 id="number_for_pay" style="color:white ;">1212</h5>
+                <button>-</button>
+            </div> -->
+
+        </div>
+
+
+
+
+
+        <div class="footer" style="color:white ;">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-4 m-12 c-12">
+                        <div class="row">
+                            <div class="col l-6 m-6 c-12">
+                                <h2>Coder bởi</h2>
+                                <h5>Anh em tao</h5>
+                                <h5>Laptop của LS</h5>
+                                <h5>Laptop của Hiuj</h5>
+                                <h5>Laptop của thằng Khứa an</h5>
+                                <h5>cả tấn nữa</h5>
+                            </div>
+                            <div class="col l-6 m-6 c-12">
+                                <h2>TuYển DụNg nÈ</h2>
+                                <h5>Nhảy popping trên bàn giám đốc</h5>
+                                <h5>Ngồi đánh cờ tướng với LS</h5>
+                                <h5>Rep tin nhắn của khách nam còn khách nữ là của LS</h5>
+                                <h5>bẢo vỆ ngÒi Đốt tHuốC cAnh xE</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-12 c-12">
+                        <h1>Anhemtaobandia</h1>
+                        <h4>KhongcOgMaildAuHihI012bA@gmail.com</h4>
+                    </div>
+                    <div class="col l-4 m-12 c-12">
+                        <div class="row">
+                            <div class="col l-6 m-6 c-12">
+                                <h2>Mấy cái điều khoản</h2>
+                                <h5>làm nhân viên bán đĩa nè</h5>
+                                <h5>síp bơ dao kéo à nhầm, dao đĩa nè</h5>
+                                <h5>da hạn hợp đồng</h5>
+                                <h5>thêm mấy cái điều em hay nói</h5>
+                                <h5>điều quan trọng là anh nhớ em</h5>
+                            </div>
+                            <div class="col l-6 m-6 c-12">
+                                <h2>in tư cho mấy bạn nữ xinh nè</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lastfooter">
+                    <h2>Bản quyền thuộc về công ty vô trách nhiệm hữu hạn Một mình tao</h2>
+                    <h2>@CoPy là tao chém từng thằng</h2>
+                </div>
+            </div>
+        </div>
+        <div id="sign"><i class=""></i></div>
+    </div>
+</body>
+</html>

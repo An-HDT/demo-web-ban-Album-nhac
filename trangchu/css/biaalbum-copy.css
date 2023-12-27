@@ -1,0 +1,459 @@
+*{
+    font-family: "Noto Sans","AdihausDIN","Helvetica",Arial,sans-serif;
+}
+
+@media (min-width: 320px) and (max-width: 739.9px) {
+    
+    .background{
+        border-radius: 5px ;
+        background-size: contain;
+        background-image: url(/Album/J.Cole/The_Off-Season/The-Off-Season.jpg);
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+    }
+    .album a{
+        font-size: calc(4px + 1.5vw);
+    }
+    .background:hover{
+        transform: scale(1.04);
+        transition: all 0.6s; 
+        /* filter: blur(0.1px) brightness(99%); blur là độ mờ còn brightness là độ sáng */
+    }
+    .album a:hover{
+        transition: all 0.6s; 
+    }
+    .img-sale img{
+        display: none;
+    }
+    .check{
+        width: 100%;
+        height: 200px;
+        background-image: url(/trangchu/img-background/41719623.jpg);
+        background-repeat: inherit;
+        background-size: contain;
+        background-position-x: center;
+    }
+    
+    .buy1get2{
+        display: block;
+        /* background-color:yellow; */
+        height: 150px;
+        margin-top: 10%;
+        text-align: center;
+    }
+    .buy1get2 h2{
+        text-transform: uppercase;
+        color:white;
+        font-size: 20px;
+        font-weight: 500;
+        padding-bottom: 15px;
+        
+    }
+    .buy1get2 p{
+        color: white;
+        padding-bottom:40px;
+        font-size: 15px;
+    }
+    .buynow2 a:hover{
+        background-color: white;
+        color: black;
+        border-radius: 5px;
+    }
+    .buynow2 a{
+        background-color: black;
+        font-family: "Noto Sans","AdihausDIN","Helvetica",Arial,sans-serif;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: x-small;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        border: 2px solid white;
+        padding: 9px 20px 9px 20px;
+        border-radius: 2px;
+    }
+    .img-sale img{
+        width: 263px;
+        height: 263px;
+    }
+    .img-sale{
+        margin-top: 2%;
+    }
+    
+
+}
+
+
+
+/* ddax xong o duoi */
+
+/* Tablet - PC low resolution */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .background{
+        background-size: contain;
+        background-image: url(/Album/J.Cole/The_Off-Season/The-Off-Season.jpg);
+        background-color: aqua;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .album a{
+        display: block;
+    }
+    .background:hover{
+        transform: scale(1.04);
+        transition: all 0.6s; 
+       
+        /* filter: blur(0.1px) brightness(99%); blur là độ mờ còn brightness là độ sáng */
+    }
+    .album a:hover{
+        transition: all 0.6s; 
+    }
+    .img-sale img{
+        width: 263px;
+        height: 263px;
+    }
+    .check{
+        width: 100%;
+        height: 300px;
+        background-image: url(/trangchu/img-background/41719623.jpg);
+        background-repeat: inherit;
+        background-size: contain;
+        background-position-x: center;
+    }
+    .buy1get2{
+        display: block;
+        height: 150px;    
+        margin-top: 23%;
+        text-align: center;
+        margin-left: 4%;
+    }
+    .buy1get2 h2{
+        text-transform: uppercase;
+        color:white;
+        font-size: 36px;
+        font-weight: 500;
+        padding-bottom: 15px;
+        
+    }
+    .buy1get2 p{
+        color: white;
+        padding-bottom:40px;
+        font-size: 15px;
+    }
+    .buynow2 a:hover{
+        background-color: white;
+        color: black;
+        border: 2px;
+    }
+    .buynow2 a{
+        background-color: black;
+        font-family: "Noto Sans","AdihausDIN","Helvetica",Arial,sans-serif;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: x-small;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        border: 2px solid white;
+        padding: 9px 20px 9px 20px;
+        border-radius: 2px;
+    }
+    .img-sale img{
+        width: 263px;
+        height: 263px;
+    }
+    .img-sale{
+        margin-top: 4%;
+    } 
+    
+}
+
+/* > PC low resolution */
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .background{
+        background-size: contain;
+        background-image: url(/Album/J.Cole/The_Off-Season/The-Off-Season.jpg);
+        background-color: aqua;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .album a{
+        display: block;
+        text-decoration: none ;
+        color: white;
+        font-weight: 400;
+        word-spacing: -1.5px;
+        font-size: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .album{
+        padding-bottom: 20px;
+        margin-bottom: 25px;
+    }
+    .album:hover{
+        transition: all 0.6s; 
+        transform: scale(1.04);
+    }
+    /* copy gaaps */
+    .check{
+        width: 100%;
+        height: 300px;
+        background-image: url(/trangchu/img-background/41719623.jpg);
+        background-repeat: inherit;
+        background-size: contain;
+        background-position-x: center;
+    }
+    .buy1get2{
+        display: block;
+        width: 50%;
+        height: 150px;    
+        margin-left: 32%;
+        margin-top: 6%;
+    }
+    .buy1get2 h2{
+        text-transform: uppercase;
+        color:white;
+        font-size: 38px;
+        font-weight: 500;
+        padding-bottom: 15px;
+        
+    }
+    .buy1get2 p{
+        color: white;
+        padding-bottom:40px;
+        font-size: 19px;
+    }
+    .buynow2 a:hover{
+        background-color: white;
+        color: white;
+    }
+    .buynow2 a{
+        background-color: black;
+        font-family: "Noto Sans","AdihausDIN","Helvetica",Arial,sans-serif;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: x-small;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        border: 2px solid white;
+        padding: 9px 20px 9px 20px;
+    }
+    .img-sale img{
+        width: 263px;
+        height: 263px;
+    }
+    .img-sale{
+        margin-top: 2%;
+    }
+    
+}
+@media (min-width: 1240px) and (max-width: 2000px) {
+        .background{
+        /* border-radius: 5px ; */
+        background-size: contain;
+        background-image: url(/Album/J.Cole/The_Off-Season/The-Off-Season.jpg);
+        /* background-color: aqua; */
+        width: 100%;
+        height: 100%;
+    }
+    .album a{
+        display: block;
+        /* padding: 5px 0px 5px 0px; */
+        text-decoration: none ;
+        color: white;
+        font-weight: 400;
+        word-spacing: -1.5px;
+        font-size: 13px;
+    }
+    .album:hover{
+        transform: scale(1.04);
+        transition: all 0.6s; 
+        border: 1.5px solid white;
+    }
+    .album{
+
+        /* border-radius: 5px; */
+        /* background-color: rgba(85, 85, 85,1); */
+
+    }
+
+
+/* quảng cáo đăng kí thành viên các thứ */
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Noto Sans","AdihausDIN","Helvetica",Arial,sans-serif;
+}
+
+.ad-qc{
+    width: 100%;
+    height: 214px;
+    background-image: url(/trangchu/img-background/41719623.jpg);
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: contain;
+    
+    position: relative;
+}
+.ad-qc-img{
+    position: relative;
+    /* background-color: yellow; */
+    width: 70%;
+    height: 76%;
+    left: 15%;
+    top: 12%;
+}
+/* sale nè mấy condy lon */
+.sale{
+    position: relative;
+    top: 15%;
+    left: 15%;
+    width: max-content;
+    height: max-content;
+}
+.sale a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    width: auto;
+    height: auto;
+}
+.buy1buy1{
+    font-size: 15px;
+}
+.saleoff{
+    font-size: 50px;
+    text-transform: uppercase;
+}
+/* đăng kí thành thành viên chính thức để nhận ưu đãi nè */
+.ad-qc-img .sale, .click-to{
+    display: inline-flexbox;
+}
+.click-to{
+    position: relative;
+    width:max-content;
+    height:max-content;
+    left: 63%;
+    bottom: 30%;
+    border: 1px solid white;
+}
+.intoclick{
+    position: relative;
+    right: 3px;
+    bottom: 3px;
+    background-color: white;
+    height: 59px;
+    width: 255px;
+}
+.intoclick a{
+    padding-left: 15px;
+    line-height: 59px;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.intoclick i{
+    line-height: 59px;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 15px;
+}
+.img-sale img{
+    width: 263px;
+    height: 263px;
+}
+
+.check{
+    width: 100%;
+    height: 300px;
+    background-image: url(/trangchu/img-background/41719623.jpg);
+    background-repeat: inherit;
+    background-size: contain;
+    background-position-x: center;
+}
+.buy1get2{
+    display: block;
+    width: 50%;
+    height: 150px;    
+    margin-left: 32%;
+    margin-top: 10%;
+}
+.buy1get2 h2{
+    text-transform: uppercase;
+    color:white;
+    font-size: 40px;
+    font-weight: 500;
+    padding-bottom: 15px;
+    
+}
+.buy1get2 p{
+    color: white;
+    padding-bottom:40px;
+    font-size: 19px;
+}
+.buynow2 a:hover{
+    background-color: white;
+    color: black;
+}
+.buynow2 a{
+    background-color: black;
+    font-family: "Noto Sans","AdihausDIN","Helvetica",Arial,sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: x-small;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 9px 20px 9px 20px;
+}
+.img-sale img{
+    width: 263px;
+    height: 263px;
+}
+.img-sale{
+    margin-top: 2%;
+} 
+
+
+}
+
+
+
+
+/* css chung cho tat ca */
+.album a{
+    display: block;
+    text-decoration: none ;
+
+    font-weight: 400;
+    word-spacing: -1.5px;
+    /* padding-top: 5px; */
+    padding-bottom: 5px;
+}
+.album{
+    cursor: pointer;
+    padding-bottom: 22px;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+}
+
+.topsale h2{
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 27px;
+    padding-top: 30px;
+    color: white;
+}
+
